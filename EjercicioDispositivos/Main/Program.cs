@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using EjercicioDispositivos.Interfaces;
 using EjercicioDispositivos.Models;
+using EjercicioDispositivos.Main;
+using EjercicioDispositivos.M;
 
 namespace EjercicioDispositivos
 {
@@ -122,7 +124,7 @@ namespace EjercicioDispositivos
                 } while (correcto);
             }
             Console.WriteLine("Introduzca el Modelo");
-             modelo= Console.ReadLine();
+            modelo = Console.ReadLine();
 
             if (modelo.Equals(""))
             {
@@ -140,22 +142,251 @@ namespace EjercicioDispositivos
                     }
 
                 } while (correcto);
-
+            }
                 Console.WriteLine("introduzca sistema operativo");
                 so = Console.ReadLine();
-             Console.WriteLine("introduzca el numero de pulgadas");
-            aux = Console.ReadLine();
-            try
-            {
-                Pulgadas = Int32.Parse(aux);
+                if (so.Equals(""))
+                {
+                    do
+                    {
+                        Console.WriteLine("Introduzca la marca.");
+                        so = Console.ReadLine();
+                        if (so.Equals(""))
+                        {
+                            correcto = false;
+                        }
+                        else
+                        {
+                            correcto = true;
+                        }
+
+                    } while (correcto);
+
+
+                    Console.WriteLine("introduzca el numero de pulgadas");
+                    aux = Console.ReadLine();
+
+                    try
+                    {
+                        Pulgadas = Int32.Parse(aux);
+                    correcto = true;
+                    }
+                    catch (Exception e)
+                    {
+                        throw new Exception("Error: caracter no valido");
+                   
+                }
+
+                if (correcto)
+                {
+                    Dispositivo x = new Movil(marca,modelo,so,Pulgadas);
+                    t.añadir(x);
+                }
+
+
+                }
             }
-            catch(Exception e)
+
+
+        public static void CrearTablets()
+        {
+            bool correcto = true;
+            string marca;
+            string cpu;
+            string modelo;
+            string so;
+            String aux;
+            int Pulgadas;
+            Console.WriteLine("Introduzca la marca.");
+            marca = Console.ReadLine();
+            if (marca.Equals(""))
             {
-                throw new Exception("Error: caracter no valido");
+                do
+                {
+                    Console.WriteLine("Introduzca la marca.");
+                    marca = Console.ReadLine();
+                    if (marca.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+                } while (correcto);
             }
+            Console.WriteLine("Introduzca el Modelo");
+            modelo = Console.ReadLine();
+
+            if (modelo.Equals(""))
+            {
+                do
+                {
+                    Console.WriteLine("Introduzca la modelo.");
+                    modelo = Console.ReadLine();
+                    if (modelo.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+
+                } while (correcto);
+            }
+            Console.WriteLine("introduzca sistema operativo");
+            so = Console.ReadLine();
+            if (so.Equals(""))
+            {
+                do
+                {
+                    Console.WriteLine("Introduzca la sistema operativo.");
+                    so = Console.ReadLine();
+                    if (so.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+
+                } while (correcto);
 
 
 
+                Console.WriteLine("introduzca el voltaje de la fuente");
+                aux = Console.ReadLine();
+
+                try
+                {
+                    Pulgadas = Int32.Parse(aux);
+                    correcto = true;
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("Error: caracter no valido");
+
+                }
+
+                if (correcto)
+                {
+                    Dispositivo x = new Tablet(marca, modelo, so, Pulgadas);
+                    t.añadir(x);
+                }
+
+
+            }
+        }
+
+
+        public static void CrearPc()
+        {
+            bool correcto = true;
+            string marca;
+            string modelo;
+            string cpu;
+            string so;
+            String aux;
+            int fuenteA;
+            Console.WriteLine("Introduzca la marca.");
+            marca = Console.ReadLine();
+            if (marca.Equals(""))
+            {
+                do
+                {
+                    Console.WriteLine("Introduzca la marca.");
+                    marca = Console.ReadLine();
+                    if (marca.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+                } while (correcto);
+            }
+            Console.WriteLine("Introduzca el Modelo");
+            modelo = Console.ReadLine();
+
+            if (modelo.Equals(""))
+            {
+                do
+                {
+                    Console.WriteLine("Introduzca la modelo.");
+                    modelo = Console.ReadLine();
+                    if (modelo.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+
+                } while (correcto);
+            }
+            Console.WriteLine("introduzca sistema operativo");
+            so = Console.ReadLine();
+            if (so.Equals(""))
+            {
+                do
+                {
+                    Console.WriteLine("Introduzca sistema operativo.");
+                    so = Console.ReadLine();
+                    if (so.Equals(""))
+                    {
+                        correcto = false;
+                    }
+                    else
+                    {
+                        correcto = true;
+                    }
+
+                } while (correcto);
+
+                Console.WriteLine("Introduzca el cpu.");
+                cpu = Console.ReadLine();
+                if (marca.Equals(""))
+                {
+                    do
+                    {
+                        Console.WriteLine("Introduzca el cpu.");
+                        marca = Console.ReadLine();
+                        if (marca.Equals(""))
+                        {
+                            correcto = false;
+                        }
+                        else
+                        {
+                            correcto = true;
+                        }
+                    } while (correcto);
+                }
+                Console.WriteLine("introduzca el numero de pulgadas");
+                aux = Console.ReadLine();
+
+                try
+                {
+                    fuenteA = Int32.Parse(aux);
+                    correcto = true;
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("Error: caracter no valido");
+
+                }
+
+                if (correcto)
+                {
+                    Dispositivo x = new Pc(fuenteA,cpu,marca, modelo, so);
+                    t.añadir(x);
+                }
+
+
+            }
         }
 
 

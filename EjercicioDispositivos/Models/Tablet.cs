@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EjercicioDispositivos.Models;
-namespace EjercicioDispositivos.Main
+namespace EjercicioDispositivos.M
 {
     class Tablet:Dispositivo
     {
-        public Tablet(String Marca, String Modelo, String SO, int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas)
+      
+
+        public Tablet(String Marca, String Modelo, String SO, int Pulgadas) : base(Marca, Modelo, SO,Pulgadas)
         {
 
         }
