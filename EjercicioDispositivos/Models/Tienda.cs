@@ -3,30 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EjercicioDispositivos.Interfaces;
 
 namespace EjercicioDispositivos.Models
 {
-    class Tienda
+    class Tienda 
     {
-
+        IList<Dispositivo> listaAveriada;
+        IList<Dispositivo> listaArreglada;
         public Tienda()
         {
             IList<Dispositivo> lista = new List<Dispositivo>();
+           
 
         }
 
-        public void añadir()
+        public void añadir(Dispositivo x)
         {
-
+            listaAveriada.Add(x);
         }
 
-        public void Reparar()
+        public void Reparar(Dispositivo x)
         {
-
+            listaArreglada.Add(x);
+            listaAveriada.Remove(x);
+                        
         }
-        public void Entregar()
+        public void Entregar(Dispositivo x)
         {
+            
+            listaArreglada.Remove(x);
 
         }
+
+      
     }
 }

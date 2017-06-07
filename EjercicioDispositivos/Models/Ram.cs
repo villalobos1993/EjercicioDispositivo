@@ -8,7 +8,7 @@ namespace EjercicioDispositivos.Models
 {
     enum Ram
     {
-        lunes,
-        martes
+        UnGB,
+        DosGB,
     }
 }

@@ -8,7 +8,7 @@ namespace EjercicioDispositivos.Interfaces
 {
     interface Reparable
     {
-         float Precio();
+        float Precio { get; set; }
 
          void Reparar(float precio);
     }

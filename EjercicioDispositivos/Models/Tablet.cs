@@ -8,7 +8,7 @@ namespace EjercicioDispositivos.Main
 {
     class Tablet:Dispositivo
     {
-        public Tablet(String Marca, String Modelo, String SO, int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas,Reparado)
+        public Tablet(String Marca, String Modelo, String SO, int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas)
         {
 
         }

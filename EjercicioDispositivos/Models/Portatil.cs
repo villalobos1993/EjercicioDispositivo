@@ -9,7 +9,7 @@ namespace EjercicioDispositivos.Models
     class Portatil : Dispositivo
     {
 
-        public Portatil(String Marca, String Modelo, String SO,int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas,Reparado)
+        public Portatil(String Marca, String Modelo, String SO,int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas)
         {
 
         }

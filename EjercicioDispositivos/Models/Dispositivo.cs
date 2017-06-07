@@ -26,7 +26,7 @@ namespace EjercicioDispositivos.Models
             this.precio = 0;
         }
 
-        public Dispositivo(String Marca,String Modelo,String SO,int pulgadas,) : this (Marca,Modelo,SO)
+        public Dispositivo(String Marca,String Modelo,String SO,int pulgadas) : this (Marca,Modelo,SO)
         {
             this.Pulgadas = pulgadas;
 
@@ -104,6 +104,8 @@ namespace EjercicioDispositivos.Models
             {
                 throw new Exception("Error: no es un dato correcto.");
             }
+
+            return cantidad1;
         }
 
         public void Reparar(float precio)
