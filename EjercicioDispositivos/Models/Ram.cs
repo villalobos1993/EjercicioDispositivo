@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace EjercicioDispositivos.Models
 {
-    class Tienda
+    enum Ram
     {
-
-
+        1,2,4,8,16,32;
     }
 }

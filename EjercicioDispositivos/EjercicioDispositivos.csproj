@@ -47,6 +47,7 @@
     <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Pc.cs" />
     <Compile Include="Models\Portatil.cs" />
+    <Compile Include="Models\Ram.cs" />
     <Compile Include="Models\Tablet.cs" />
     <Compile Include="Models\Movil.cs" />
     <Compile Include="Main\Program.cs" />
