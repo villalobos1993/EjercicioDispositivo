@@ -8,13 +8,13 @@ namespace EjercicioDispositivos.Main
 {
     class Tablet:Dispositivo
     {
-        public Tablet(String Marca, String Modelo, String SO, int Pulgadas) : base(Marca, Modelo, SO,Pulgadas)
+        public Tablet(String Marca, String Modelo, String SO, int Pulgadas, bool Reparado) : base(Marca, Modelo, SO,Pulgadas,Reparado)
         {
 
         }
 
 
-        public override String toString()
+        public override String ToString()
         {
             return Marca + " " + Modelo + " " + SO + " " + Pulgadas;
         }

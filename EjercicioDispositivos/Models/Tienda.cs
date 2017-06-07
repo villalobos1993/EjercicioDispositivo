@@ -9,6 +9,24 @@ namespace EjercicioDispositivos.Models
     class Tienda
     {
 
+        public Tienda()
+        {
+            IList<Dispositivo> lista = new List<Dispositivo>();
 
+        }
+
+        public void añadir()
+        {
+
+        }
+
+        public void Reparar()
+        {
+
+        }
+        public void Entregar()
+        {
+
+        }
     }
 }

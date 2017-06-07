@@ -9,13 +9,13 @@ namespace EjercicioDispositivos
     class Movil : Dispositivo
     {
 
-        public Movil(String marca,String modelo,String SO,int Pulgadas) : base(marca, modelo, SO,Pulgadas)
+        public Movil(String marca,String modelo,String SO,int Pulgadas,bool Reparado) : base(marca, modelo, SO,Pulgadas,Reparado)
         {
 
 
         }
 
-        public override String toString()
+        public override String ToString()
         {
             return Marca + " " + Modelo + " " + SO + " " + Pulgadas;
         }

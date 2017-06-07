@@ -13,6 +13,7 @@ namespace EjercicioDispositivos.Models
         protected String Modelo;
         protected int Pulgadas;
         protected string SO;
+        protected float precio;
 
         private Dispositivo() { }
 
@@ -22,9 +23,10 @@ namespace EjercicioDispositivos.Models
             this.Marca = marca;
             this.Modelo = modelo;
             this.SO = SO;
+            this.precio = 0;
         }
 
-        public Dispositivo(String Marca,String Modelo,String SO,int pulgadas) : this (Marca,Modelo,SO)
+        public Dispositivo(String Marca,String Modelo,String SO,int pulgadas,) : this (Marca,Modelo,SO)
         {
             this.Pulgadas = pulgadas;
 
@@ -64,26 +66,52 @@ namespace EjercicioDispositivos.Models
             }
         }
           
+        public float Precios
+        {
+            get
+            {
+                return precio;
+            }
+            set
+            {
+                precio = value;
+            }
+        }
+
         public string GenerarMac()
         {
 
             return "";
         }
 
-        public virtual String toString()
+        public virtual String ToString()
         {
             return Marca + " " + Modelo + " " + SO + " " + Pulgadas;
         }
 
         public float Precio()
         {
-            throw new NotImplementedException();
+            float cantidad1;
+            String cantidad2;
+            Console.WriteLine("Introduzca el precio de reparacion");
+            cantidad2 = Console.ReadLine();
+            try
+            {
+                cantidad1 = Single.Parse(cantidad2);
+
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Error: no es un dato correcto.");
+            }
         }
 
         public void Reparar(float precio)
         {
-            Console.WriteLine("hola");
-            throw new NotImplementedException();
+            if (precios > precio)
+            {
+
+            }
         }
     }
 }
